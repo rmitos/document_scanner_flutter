@@ -46,6 +46,6 @@ android {
 }
 
 dependencies {
-    implementation project(":scanlibrary")
+    implementation 'com.github.rmitos:documentscannerandroid:1.0.1'
 }
 
