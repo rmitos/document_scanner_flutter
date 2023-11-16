@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:flutter/services.dart';
-import 'package:document_scanner/document_scanner.dart';
+import 'package:document_scanner_flutter/document_scanner.dart';
 
 void main() {
   PlatformDispatcher.instance.onError = (error, stack) {
