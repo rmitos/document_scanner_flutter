@@ -26,6 +26,6 @@ abstract class DocumentScannerPlatform extends PlatformInterface {
   }
 
   Future<Uint8List?> getScannedImage() {
-    throw UnimplementedError('platformVersion() has not been implemented.');
+    throw UnimplementedError('getScannedImage() has not been implemented.');
   }
 }

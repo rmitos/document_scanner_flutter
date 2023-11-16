@@ -7,7 +7,7 @@ import 'document_scanner_platform_interface.dart';
 class MethodChannelDocumentScanner extends DocumentScannerPlatform {
   /// The method channel used to interact with the native platform.
   @visibleForTesting
-  final methodChannel = const MethodChannel('document_scanner');
+  final methodChannel = const MethodChannel('document_scanner_flutter');
 
   @override
   Future<Uint8List?> getScannedImage() async {
