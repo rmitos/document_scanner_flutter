@@ -1,2 +1,2 @@
-# document_scanner
+# document_scanner_flutter
  
