@@ -1,6 +1,6 @@
 name: document_scanner_flutter
 description: Flutter document scanner plugin for Android.
-version: 0.0.1
+version: 0.0.2
 homepage:
 publish_to: 'none'
 
