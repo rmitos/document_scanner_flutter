@@ -14,6 +14,7 @@ import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 import io.flutter.plugin.common.PluginRegistry
+import java.io.File
 
 /** DocumentScannerPlugin */
 class DocumentScannerPlugin : FlutterPlugin, MethodCallHandler, ActivityAware,
@@ -78,11 +79,12 @@ class DocumentScannerPlugin : FlutterPlugin, MethodCallHandler, ActivityAware,
                 result.error("", "No document scanned.", "")
                 return true
             }
-            val contentResolver = activity!!.applicationContext.contentResolver
-            contentResolver.openInputStream(uri).use {
-                val imageBytes = it?.readBytes()
+
+            File(uri.path!!).inputStream().use {
+                val imageBytes = it.readBytes()
                 result.success(imageBytes)
             }
+
             return true
         }
         return false
